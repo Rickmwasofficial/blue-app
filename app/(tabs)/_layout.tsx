@@ -9,7 +9,7 @@ const TabIcon = ({ focused, icon, name }: any) => {
         return (
           <ImageBackground
             source={images.highlight}
-            className="flex flex-row w-full flex-1 min-w-[112px] min-h-12 mt-2 justify-center items-center rounded-full overflow-hidden"
+            className="flex flex-row w-full flex-1 min-w-[112px] min-h-[4rem] mt-3 justify-center items-center rounded-full overflow-hidden"
           >
             <Image source={icon} tintColor="#151312" className="size-5" />
             <Text className="text-secondary text-base font-semibold ml-2">
@@ -17,13 +17,13 @@ const TabIcon = ({ focused, icon, name }: any) => {
             </Text>
           </ImageBackground>
         );
-    }
-
-    return (
-    <View className="size-full justify-center items-center mt-2 rounded-full">
-        <Image source={icon} tintColor="#A8B5DB" className="size-5" />
-    </View>
-    );
+      }
+    
+      return (
+        <View className="size-full justify-center items-center mt-3 rounded-full">
+          <Image source={icon} tintColor="#A8B5DB" className="size-5" />
+        </View>
+      );
 }
 
 const _layout = () => {
@@ -41,8 +41,8 @@ const _layout = () => {
           backgroundColor: "#0F0D23",
           borderRadius: 50,
           marginHorizontal: 10,
-          marginBottom: 36,
-          height: 48,
+          marginBottom: 34,
+          height: 49,
           position: "absolute",
           overflow: "hidden",
           borderWidth: 1,
