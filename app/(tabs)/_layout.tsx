@@ -7,15 +7,14 @@ import { icons } from '@/constants/icons'
 const TabIcon = ({ focused, icon, name }: any) => {
     if (focused) {
         return (
-          <ImageBackground
-            source={images.highlight}
-            className="flex flex-row w-full flex-1 min-w-[112px] min-h-[4rem] mt-3 justify-center items-center rounded-full overflow-hidden"
+          <View
+          className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
           >
-            <Image source={icon} tintColor="#151312" className="size-5" />
-            <Text className="text-secondary text-base font-semibold ml-2">
+            <Image source={icon} className="size-5" tintColor="#A8B5DB" />
+            <Text className="text-white text-base font-semibold ml-2">
               {name}
             </Text>
-          </ImageBackground>
+          </View>
         );
       }
     
@@ -40,9 +39,9 @@ const _layout = () => {
         tabBarStyle: {
           backgroundColor: "#0F0D23",
           borderRadius: 50,
-          marginHorizontal: 10,
-          marginBottom: 34,
-          height: 49,
+          marginHorizontal: 20,
+          marginBottom: 36,
+          height: 52,
           position: "absolute",
           overflow: "hidden",
           borderWidth: 1,

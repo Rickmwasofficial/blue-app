@@ -7,6 +7,7 @@ import { fetchMovies } from '@/services/api'
 import { useRouter } from 'expo-router'
 import { icons } from '@/constants/icons'
 import SearchBar from '@/components/SearchBar'
+import { updateSearchCount } from '@/services/appwrite'
 
 const search = () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -16,6 +17,7 @@ const search = () => {
     const func = setTimeout(async () => {
       if (searchQuery.trim()) {
         await reload()
+        
       } else {
         reset()
       }
@@ -23,6 +25,12 @@ const search = () => {
 
     return () => clearTimeout(func)
   }, [searchQuery])
+
+  useEffect(() => {
+    if (movies?.length > 0 && movies?.[0]) {
+      updateSearchCount(searchQuery, movies['0'])
+    }
+  }, [movies])
 
   return (
     <View
